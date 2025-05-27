@@ -35,7 +35,7 @@ function About() {
                                     <div className="text-gray-600">projets automatisés</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-purple-600">5+ ans</div>
+                                    <div className="text-3xl font-bold text-purple-600">7+ ans</div>
                                     <div className="text-gray-600">d'expérience</div>
                                 </div>
                             </div>
