@@ -6,7 +6,7 @@ function Experience() {
                 company: 'LIS Data Solutions (Espagne)',
                 period: 'Mars 2023 – Avril 2025',
                 description:
-                    "Responsable d'équipe R&D sur des projets IA innovants. Mise en œuvre de LLM et d’agents IA pour des cas concrets, avec formation des équipes pour pérenniser les résultats.",
+                    "Responsable d'équipe R&D sur des projets de consulting IA innovants. Mise en œuvre de LLM et d’agents IA pour des cas concrets, avec formation des équipes pour pérenniser les résultats.",
                 icon: 'fas fa-brain'
             },
             {
