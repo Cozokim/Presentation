@@ -1,24 +1,5 @@
 function Contact() {
     try {
-        const [formData, setFormData] = React.useState({
-            name: '',
-            email: '',
-            message: ''
-        });
-
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            alert("Merci pour votre message ! Je vous répondrai très bientôt.");
-            setFormData({ name: '', email: '', message: '' });
-        };
-
-        const handleChange = (e) => {
-            setFormData({
-                ...formData,
-                [e.target.name]: e.target.value
-            });
-        };
-
         return (
             <section data-name="contact" data-file="components/Contact.js" id="contact" className="py-20 bg-gray-50">
                 <div className="container mx-auto px-6">
@@ -28,11 +9,11 @@ function Contact() {
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {/* Bloc d'information */}
                         <div className="fade-in">
                             <h3 className="text-2xl font-semibold mb-6">Discutons ensemble</h3>
                             <p className="text-gray-600 mb-8">
-                                Vous avez un besoin, une idée, ou simplement l’envie d’explorer comment l’automatisation et l’IA peuvent faire avancer votre activité ?<br />
-<br />
+                                Vous avez un besoin, une idée, ou simplement l’envie d’explorer comment l’automatisation et l’IA peuvent faire avancer votre activité ?<br /><br />
                                 Je propose des appels gratuits pour comprendre vos enjeux et voir si je peux vous accompagner avec une solution adaptée.
                             </p>
 
@@ -52,16 +33,19 @@ function Contact() {
                             </div>
                         </div>
 
+                        {/* Formulaire Formspree */}
                         <div className="fade-in">
-                            <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-lg">
+                            <form
+                                action="https://formspree.io/f/xldbqdkr"
+                                method="POST"
+                                className="bg-white p-6 rounded-lg shadow-lg"
+                            >
                                 <h3 className="text-xl font-semibold mb-4">Envoyer un message</h3>
                                 <div className="space-y-4">
                                     <input
                                         type="text"
                                         name="name"
                                         placeholder="Votre nom"
-                                        value={formData.name}
-                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
                                     />
@@ -69,8 +53,6 @@ function Contact() {
                                         type="email"
                                         name="email"
                                         placeholder="Votre email"
-                                        value={formData.email}
-                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
                                     />
@@ -78,8 +60,6 @@ function Contact() {
                                         name="message"
                                         placeholder="Votre message"
                                         rows="4"
-                                        value={formData.message}
-                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 resize-none"
                                     ></textarea>
@@ -93,6 +73,7 @@ function Contact() {
                             </form>
                         </div>
 
+                        {/* Calendrier (existant) */}
                         <div className="fade-in">
                             <Calendar />
                         </div>
