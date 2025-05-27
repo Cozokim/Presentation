@@ -2,7 +2,7 @@ function Experience() {
     try {
         const experiences = [
             {
-                title: 'Data Scientist / AI Engineer R&D',
+                title: 'Data Scientist / Ingénieur IA R&D',
                 company: 'LIS Data Solutions (Espagne)',
                 period: 'Mars 2023 – Avril 2025',
                 description:
